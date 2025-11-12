@@ -1,0 +1,55 @@
+.container section{
+    background-color: rgb(72, 109, 142);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    grid-template-areas: 
+     'number 1 number1 number2'
+     ;
+}
+
+.container{
+    background-color: aquamarine;
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-areas: 'number1 number1';
+    padding: 10px;
+    grid-gap:10px;
+
+}
+
+.item1{
+    grid-area: number1;
+}
+
+.item2{
+    grid-area: number2;
+}
+
+.item3{
+    grid-area: number3;
+}
+
+.item4{
+    grid-area: number4;
+}
+
+.item5{
+    grid-area: number5;
+}
+
+.item6{
+    grid-area: number6;
+}
+
+.item7{
+    grid-area: number7;
+}
+
+.item8{
+    grid-area: number8;
+}
+
+.item9{
+    grid-area: number9;
+}

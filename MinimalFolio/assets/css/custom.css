@@ -1,0 +1,157 @@
+body{
+    font-family: Arial, Helvetica, fantasy;
+}
+
+h1{
+    font-size: large;
+    font-weight: 300;
+    color: blue;
+    font-family: Helvetica, fantasy;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 300px;
+    font-weight: lighter;
+    color: rgb(22, 85, 128);
+    text-align: center;
+    margin: 30px;
+}
+
+h3{
+    font-size: 450px;
+    font-weight: 500;
+    color: rgb(55,105,200);
+    text-transform: capitalize;
+    text-align: right;
+}
+
+h4,h5,h6{
+    font-size: 300px;
+    font-weight: 900;
+    color: rgb(135,135,135)
+}
+
+button {
+    color: rgb(255,30,33);
+    background-color: aquamarine;
+    border: 2px solid rgb(200,100,100);
+    padding: 10px;
+}
+
+button:hover{
+    color: rgb(0,0,255);
+    background-color: rgb(0,255,0);
+    padding: 30px;
+}
+button:active{
+    color: rgb(55,105,200);
+    background-color: black;
+    font-size: large;
+}
+
+a {
+    color: rgb(255,30,33);
+    background-color: aquamarine;
+    border: rgb(200,100,100);
+    padding: 10px;
+}
+
+a:hover{
+    color: rgb(0,0,255);
+    background-color: rgb(0,255,0);
+    padding: 30px;
+}
+a:active{
+    color: rgb(55,105,200);
+    background-color: black;
+    font-size: large;
+}
+
+section{
+    border: 10px solid rgb(43, 169, 174);
+    border-radius: 100px;
+    margin: 125px;
+    padding: 100px;
+    box-shadow: 4px 4px 10px rgb(55,105,200);
+    background-color: rgb(52, 151, 160);
+}
+
+
+.progress-bar{
+    background-color: yellowgreen;
+    border-radius: 20px;
+    height: 25px;
+    box-shadow: 2px 2px 6px rgb(0, 255, 13);
+}
+
+nav{
+    color: red;
+}
+
+nav a{
+    color: tomato;
+}
+
+ol.custom-counter {
+  counter-reset: item;
+  padding-left: 0;
+}
+
+ol.custom-counter li {
+  counter-increment: item;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+}
+
+ol.custom-counter li::before {
+  content: counter(item) ". ";
+  position: absolute;
+  left: 0;
+  color: crimson;
+  font-weight: bold;
+}
+
+ul.custom-bullet li {
+  margin-bottom: 20px;
+  position: relative;
+
+}
+
+ul.custom-bullet li::before {
+  content: "X";
+  position: left;
+  left: 0;
+  color: teal;
+  font-size: 18px;
+}
+
+table{
+    width: 400px;
+    border-collapse: collapse;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+th, td{
+    border: 3px solid rgb(43, 169, 174);
+    text-align: center;
+}
+
+thead{
+    background-color: rgb(166, 161, 167);
+    color: turquoise;
+    text-align: center;
+}
+
+tbody{
+    background-color: rgb(255, 255, 255);
+    color: rgb(22, 85, 128)
+}
+
+tbody tr:hover {
+  background-color: #d1ecf1;
+  cursor: pointer;
+}
+
