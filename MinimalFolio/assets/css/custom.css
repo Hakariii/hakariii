@@ -121,10 +121,14 @@ ul.custom-bullet li {
 
 ul.custom-bullet li::before {
   content: "X";
-  position: left;
+  position: absolute;
   left: 0;
   color: teal;
   font-size: 18px;
+  opacity: 0;
+  animation-name: FadeInUp;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
 
 table{
@@ -155,3 +159,161 @@ tbody tr:hover {
   cursor: pointer;
 }
 
+@keyframes FadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    color: aqua;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateY(15px);
+    color: aquamarine;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    color: rgb(43, 169, 174);
+  }
+}
+
+@keyframes Spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+#contact {
+  animation: Spin 2s linear 1s;
+}
+
+
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+
+  animation: hidePreloader 0.8s forwards;
+  animation-delay: 3s;
+}
+
+#preloader div {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgb(255, 0, 0);
+  opacity: 0.2;
+  animation: pulse 0.8s infinite ease-in-out;
+}
+
+#preloader div:nth-child(1) { animation-delay: 0s; }
+#preloader div:nth-child(2) { animation-delay: 0.15s; }
+#preloader div:nth-child(3) { animation-delay: 0.30s; }
+#preloader div:nth-child(4) { animation-delay: 0.45s; }
+
+@keyframes pulse {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(-10px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.3; }
+}
+
+@keyframes hidePreloader {
+  0%   { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+ 
+  #preloader,
+  #preloader * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+
+  #preloader {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  #preloader div {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  #contact,
+  #contact * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+@keyframes Gradiend{
+    0%{
+        background-color:rgb(22, 85, 128)
+    }
+    33%{
+        background-color:aqua
+    }
+    66%{
+        background-color:aquamarine
+    }
+    100%{
+        background-color:blue
+    }
+}
+#services{
+    animation: Gradiend 4s ease-in-out infinite;
+}
+
+#about {
+  position: relative;
+  overflow: hidden; 
+}
+
+
+.about-shapes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; 
+}
+
+
+.shape {
+  position: absolute;
+  opacity: 0.6;
+}
+
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid rgba(255, 200, 0, 0.4);
+  top: 50%;
+  right: 30%;
+  animation: scaleShape 4s ease-in-out infinite;
+}
+
+@keyframes scaleShape {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
