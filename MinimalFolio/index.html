@@ -1192,6 +1192,12 @@
                       <label for="userName" class="field-label">Name</label>
                     </div>
                   </div>
+                  <div class="col-md-6">
+                    <div class="form-field">
+                      <input type="text" name="surname" class="form-input" id="userSurname" placeholder="Your Surname" required="">
+                      <label for="userSurname" class="field-label">Surname</label>
+                    </div>
+                  </div>
 
                   <div class="col-md-6">
                     <div class="form-field">
@@ -1221,6 +1227,24 @@
                   <textarea class="form-input message-input" name="message" id="userMessage" rows="5" placeholder="Tell us about your project" required=""></textarea>
                   <label for="userMessage" class="field-label">Message</label>
                 </div>
+                <div class="rating-questions">
+
+                <div class="form-field mt-3">
+                  <label for="q1" class="field-label">How would you rate our prices? (1–10)</label>
+                  <input type="range" name="q1" id="q1" class="form-range" min="1" max="10" value="5">
+                </div>
+
+                <div class="form-field mt-3">
+                  <label for="q2" class="field-label">How would you rate our design? (1–10)</label>
+                  <input type="range" name="q2" id="q2" class="form-range" min="1" max="10" value="5">
+                </div>
+
+                <div class="form-field mt-3 mb-2">
+                  <label for="q3" class="field-label">How would you rate interes by CV web-page? (1–10)</label>
+                  <input type="range" name="q3" id="q3" class="form-range" min="1" max="10" value="5">
+                </div>
+
+</div>
 
                 <div class="my-3">
                   <div class="loading">Loading</div>
@@ -1228,13 +1252,17 @@
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
 
-                <button type="submit" class="send-button">
-                  Send Message
+                <button type="submit" class="send-button" id="submitBtn" disabled>
+                  SEND MESSAGE
                   <span class="button-arrow">→</span>
                 </button>
               </form>
+              <div id="formOutput" class="form-output" style="margin-top:20px; padding:15px; background:#f5f5f5; display:none;"></div>
+              </div>
             </div>
           </div>
+
+
 
           <div class="col-lg-5 order-lg-2 order-1" data-aos="fade-left" data-aos-delay="300">
             <div class="contact-sidebar">
@@ -1357,6 +1385,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
